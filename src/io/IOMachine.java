@@ -43,8 +43,10 @@ public class IOMachine {
 		    	} else {
 		    		if (s != "" && s != "\n") {
 			    		instr = s.split("-");
-					    parsedProgram.add(new Transition(stateList.get(instr[0]),instr[1],stateList.get(instr[2]),instr[3],instr[4]));
-			    	}
+			    		Transition temp = new Transition(stateList.get(instr[0]),instr[1],stateList.get(instr[2]),instr[3],instr[4]);
+					    parsedProgram.add(temp);
+					    stateList.get(instr[0]).addTransition(temp);
+		    		}
 		    	}
 		    	line++;
 		    }
