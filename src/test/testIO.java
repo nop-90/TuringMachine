@@ -10,6 +10,8 @@ public class testIO {
 			for (Transition now : machine.getInstructions()) {
 				System.out.println(now.getDepart()+" "+now.getSymbole()+" "+now.getArrive()+" "+now.getLR()+" "+now.getReec());
 			}
+			System.out.println(machine.getStartingStates()[0]);
+			System.out.println(machine.getStoppingStates()[0]);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
