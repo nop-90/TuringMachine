@@ -16,6 +16,18 @@ public class Transition {
 		this.LR = LR; 
 		this.reecriture = reecriture;
 	}
+	
+	public String toString(){
+		String ret = ""
+				+this.depart.getId()
+				+"-"+this.symbole
+				+"-"+this.arrive.getId()
+				+"-"+this.LR
+				+"-"+this.reecriture
+				+"\n"
+			;
+		return ret;
+	}
 
 	public Etat getDepart(){return this.depart;}
 	public Etat getArrive(){return this.arrive;}
